@@ -1,0 +1,379 @@
+/* Global Styles */
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    padding: 40px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .logo img {
+    height: 75px;
+}
+
+header nav {
+    position: absolute;
+    right: 40px;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 40px 20px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.menu-toggle i {
+    font-size: 24px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-section .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-section .hero-content {
+    z-index: 1;
+}
+
+.hero-section .hero-content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-section .hero-content p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #ffdd00;
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ffc107;
+}
+
+/* Services Section */
+.services-section {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.services-section .service {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.services-section .service h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    gap: 15px;
+    color: #ffdd00;
+}
+
+.services-section .service p {
+    margin: 10px 0 0 10px;
+    font-size: 18px;
+}
+
+/* Custom styles for service links */
+.services-section .service a {
+    text-decoration: none; /* Quitar el subrayado */
+    color: inherit; /* Heredar el color del elemento padre */
+    font-weight: bold; /* Puedes añadir cualquier otra propiedad para el estilo */
+}
+
+.services-section .service a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.about-section .about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-section .about-content h3 {
+    font-size: 24px;
+    color: #ffdd00; /* Amarillo */
+    margin-top: 30px;
+}
+
+.about-section .about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-section .about-content ul li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-section form label {
+    font-size: 18px;
+    text-align: left;
+    color: #333;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.contact-section form button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #ffdd00;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.contact-section form button:hover {
+    background-color: #ffc107;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Services Details Section */
+.service-details-section {
+    padding: 60px 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.service-details-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.service-details-section .service-step {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.service-details-section .service-step h3 {
+    font-size: 24px;
+    color: #ffdd00;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-details-section .service-step p {
+    font-size: 18px;
+    margin: 10px 0 20px;
+}
+
+.service-details-section .service-step img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav ul li a {
+        padding: 15px 0;
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+    }
+}

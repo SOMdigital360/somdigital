@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOM Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="SOM Digital">
+        </div>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Servicios</a>
+                    <div class="dropdown-content">
+                        <a href="redes-sociales.html">Redes Sociales</a>
+                        <a href="paginas-web.html">Páginas Web</a>
+                        <a href="email-marketing.html">Email Marketing</a>
+                    </div>
+                </li>
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="videos/background-video.mp4" type="video/mp4">
+            <source src="videos/background-video.webm" type="video/webm">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <div class="hero-content">
+            <h1>SOM Digital</h1>
+            <p>¡Primera ESTRATEGIA MARKETING GRATIS!</p>
+            <a href="#contacto" class="cta-button" onclick="setContactMessage()">Solicitar Ahora</a>
+        </div>
+    </section>
+
+    <section class="services-section" id="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="service">
+            <h3><i class="fas fa-share-alt"></i> <a href="redes-sociales.html">Redes Sociales</a></h3>
+            <p>Gestión y creación de contenido para tus redes sociales.</p>
+        </div>
+        <div class="service">
+            <h3><i class="fas fa-globe"></i> <a href="paginas-web.html">Páginas Web</a></h3>
+            <p>Diseño y desarrollo de páginas web personalizadas.</p>
+        </div>
+        <div class="service">
+            <h3><i class="fas fa-envelope"></i> <a href="email-marketing.html">Email Marketing</a></h3>
+            <p>Campañas de email marketing efectivas.</p>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <h2>Sobre Nosotros</h2>
+        <div class="about-content">
+            <p>En <strong>SOM Digital</strong>, nos apasiona transformar la presencia online de nuestros clientes en historias de éxito. Ubicados en el corazón de Castellón, somos una agencia de marketing digital comprometida con la excelencia y la innovación.</p>
+
+            <h3>Nuestra Filosofía</h3>
+            <p>Creemos que cada negocio es único, y por eso ofrecemos soluciones personalizadas que se adaptan a las necesidades específicas de cada cliente. Nuestro enfoque es cercano y profesional, asegurándonos de entender a fondo los objetivos y desafíos de tu empresa.</p>
+
+            <h3>Nuestro Equipo</h3>
+            <p>Contamos con un equipo de expertos en diversas áreas del marketing digital, incluyendo gestión de redes sociales, diseño y desarrollo de páginas web, y campañas efectivas de email marketing. Trabajamos en estrecha colaboración con nuestros clientes para desarrollar estrategias que no solo aumenten su visibilidad online, sino que también impulsen sus ventas y crecimiento.</p>
+
+            <h3>Nuestra Promesa</h3>
+            <p>En SOM Digital, tu éxito es nuestro éxito. Nos dedicamos a crear estrategias de marketing que no solo cumplen con tus expectativas, sino que las superan. Nos enorgullece ser parte del crecimiento de nuestros clientes, ofreciendo un servicio de alta calidad y resultados tangibles.</p>
+
+            <h3>Por Qué Elegirnos</h3>
+            <ul>
+                <li><strong>Innovación:</strong> Utilizamos las últimas herramientas y tendencias para mantener a nuestros clientes a la vanguardia.</li>
+                <li><strong>Compromiso:</strong> Nuestro compromiso es con tu éxito. Estamos contigo en cada paso del camino.</li>
+                <li><strong>Personalización:</strong> Adaptamos nuestras estrategias a las necesidades específicas de tu negocio para asegurar resultados óptimos.</li>
+                <li><strong>Resultados Tangibles:</strong> Nos enfocamos en obtener resultados medibles que impulsan el crecimiento de tu empresa.</li>
+            </ul>
+
+            <p>Descubre cómo podemos ayudarte a llevar tu negocio al siguiente nivel con estrategias de marketing digital hechas a medida. ¡Contáctanos hoy y empieza a ver la diferencia con SOM Digital!</p>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+        <h2>Contacto</h2>
+        <form action="https://formspree.io/f/mjkbbpwv" method="POST">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SOM Digital. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('open');
+        });
+
+        function setContactMessage() {
+            const messageField = document.getElementById('message');
+            if (messageField) {
+                messageField.value = "QUIERO MI ESTRATEGIA DE MARKETING GRATIS!!";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const message = urlParams.get('message');
+            if (message) {
+                document.getElementById('message').value = message;
+            }
+        });
+    </script>
+</body>
+</html>
